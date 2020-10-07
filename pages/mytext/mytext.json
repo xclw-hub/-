@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "context":"../../components/context/context"
+  },
+  "navigationBarTitleText": "比邻发布"
+}

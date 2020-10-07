@@ -1,0 +1,4 @@
+<view class="divLine"></view>
+<view class="author">
+    <view class="author_name font-break">{{answer.name}}回复{{answer.to}}:{{answer.content}}</view>
+</view>

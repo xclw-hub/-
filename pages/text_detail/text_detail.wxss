@@ -1,0 +1,89 @@
+.divLine {
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+}
+.author {
+  height: 150rpx;
+  display: flex;
+  font-size: 40rpx;
+}
+.author image {
+  flex: 3;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+.author .middle {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+}
+.author .middle .author_name {
+  flex: 1;
+}
+.author .middle .author_time {
+  flex: 1;
+}
+.author .zan {
+  flex: 5;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.author .zan image {
+  height: 50%;
+  flex: 1;
+}
+.author .zan .zan_num {
+  flex: 1;
+}
+.title {
+  font-size: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+}
+.context {
+  font-size: 40rpx;
+}
+.huifu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40rpx;
+  font-weight: bolder;
+  background-image: linear-gradient(0deg, #00dddd 0%, #00ffaa 100%);
+}
+.recommend {
+  margin-bottom: 100rpx;
+}
+.bottom {
+  height: 50rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0rpx;
+  display: flex;
+  background-color: #CDCDCD;
+  flex-direction: row;
+}
+.bottom textarea {
+  flex: 7;
+  background-color: #ffffff;
+  font-size: 40rpx;
+}
+.bottom .zan {
+  height: 50rpx;
+  flex: 1;
+}
+.bottom .zan image {
+  height: 50rpx;
+}
+.bottom .shoucang {
+  height: 50rpx;
+  flex: 1;
+}
+.bottom .shoucang image {
+  height: 50rpx;
+}

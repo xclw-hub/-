@@ -1,0 +1,19 @@
+<view class="content">
+  <view class='input-title'>登录（第一次登录注册）</view>
+  <view class='input-wrap'>
+    <image src='../../icons/ren.png' class='input-icon' mode="widthFix"></image>
+    <input class='input-usrnum' placeholder='请输入用户名'  value='{{usr_num}}' bindinput='usrnumInput'/>
+    <icon type="cancel" size="25" color="#666666" wx:if='{{usr_num_clear_flag}}' bindtap='usr_numClearInput'/>
+  </view>
+  <view class='input-wrap'>
+    <image src='../../icons/email.png' mode='widthFix' class='input-icon' ></image>
+    <input class='input-usrnum' placeholder='请输入邮箱地址'  value='{{email}}' bindinput='emailInput'/>
+    <icon type="cancel" size="25" color="#666666" wx:if='{{email_clear_flag}}' bindtap='emailClearInput'/>
+  </view>
+  <view class='input-wrap'>
+    <image src='../../icons/pwd.png' mode='widthFix' class='input-icon'></image>
+    <input class='input-usrnum' placeholder='请输入密码(最少6位)'  value='{{pwd}}' bindinput='pwdInput'/>
+    <icon type="cancel" size="25" color="#666666" wx:if='{{pwd_clear_flag}}' bindtap='pwdClearInput'/>
+  </view>
+  <button class='login-btn' bindtap='Login' loading='{{loading}}' disabled='{{loading}}'>下一步</button>
+</view>

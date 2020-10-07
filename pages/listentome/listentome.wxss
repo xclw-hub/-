@@ -1,0 +1,90 @@
+.context {
+  height: 600rpx;
+  font-size: 60rpx;
+  border: solid 1rpx #e6e6e6;
+  border-radius: 15rpx;
+  box-sizing: border-box;
+  display: flex;
+  padding: 25rpx 36rpx 25rpx 45rpx;
+  margin: 25rpx;
+  background-color: transparent;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  margin-bottom: 150rpx;
+}
+.title {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70rpx;
+  border: solid 1rpx #e6e6e6;
+  border-radius: 15rpx;
+  background-color: transparent;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  margin: 25rpx;
+  font-size: 60rpx;
+  font-weight: 700;
+}
+.divLine {
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+}
+/* pages/index/index.wxss */
+/*画廊*/
+.gallery {
+  width: 630rpx;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+/*每张图片所占容器*/
+.item {
+  position: relative;
+  margin: 10rpx 5rpx;
+  width: 200rpx;
+  height: 200rpx;
+}
+.item image {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+}
+/*add按钮*/
+.item .addIcon {
+  position: relative;
+  width: 200rpx;
+  height: 200rpx;
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 80rpx;
+  background: #f2f2f2;
+  color: #555;
+  border-radius: 15px;
+}
+/*删除按钮*/
+.delete {
+  position: absolute;
+  right: 0;
+  top: 0;
+  /* background:#ccc; */
+  opacity: 1;
+  height: 36rpx;
+  font-size: 22rpx;
+  font-weight: 700;
+  padding: 0 8rpx 0 10rpx;
+}
+.bottom {
+  position: fixed;
+  bottom: 20rpx;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+.bottom button {
+  border-radius: 95rpx;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  background-image: linear-gradient(0deg, #00dddd 0%, #00ffaa 100%);
+}

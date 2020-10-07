@@ -1,0 +1,11 @@
+.login{
+  margin: 50rpx;
+}
+.login button{
+  border-radius: 95rpx;
+  box-shadow: 2px 2px 3px #aaaaaa;
+  background: #f2f2f2;
+  background-image: linear-gradient(0deg, 
+  #00dddd 0%, 
+  #00ffaa 100%)
+}

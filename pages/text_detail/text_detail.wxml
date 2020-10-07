@@ -1,0 +1,68 @@
+<view class="author">
+  <image class="author_pictures" src="{{contextdata.usrdata.usrpictures}}" mode="heightFix" lazy-load="false" binderror="" bindload="" />
+  <view class="middle">
+      <view class="author_name">{{contextdata.usrdata.usrname}}</view>
+      <view class="author_time">{{contextdata.usrdata.time}}</view>
+  </view>
+  <view class="zan">
+    <block wx:if="{{contextdata.usrdata.zan_me}}">
+      <image class="zan_logo_unactived"  src="/icons/zan.png" mode="aspectFit" lazy-load="false" bindtap="zanchange"  bindload="" ></image>
+    </block>
+    <block wx:else>
+       <image class="zan_logo_unactived"  src="/icons/zaned.png" mode="aspectFit" lazy-load="false" bindtap="zanchange"  bindload="" ></image>
+    </block>
+    <view class="zan_num">{{contextdata.usrdata.zan_num}}</view>
+  </view>
+</view>
+<view class="divLine"></view>
+<view class="title">
+  {{contextdata.usrdata.title}}
+</view>
+<view class="context font-break">
+  {{contextdata.usrdata.content}}
+</view>
+<view class="image" wx:for="{{contextdata.usrdata.pictures}}">
+  <image class="" src="{{item}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" />
+</view>
+<view class="divLine"></view>
+<view class="huifu">
+  精彩回复
+</view>
+<view class="divLine"></view>
+<view class="recommend">
+<view  wx:for="{{contextdata.reviewdata}}" wx:key="reviewid">
+  <usrreview tabs="{{item}}" bindhuifureview="huifureview" bindhuifuanswer="huifuanswer" bindreviewzanchange="reviewzanchange"></usrreview>
+</view>
+</view>
+<view class="bottom">
+  <view class="divLine"></view>
+    <view wx:if="{{flag}}">
+      <textarea class="input" name="hpl"  placeholder="回复{{currentname}}" 
+      bindblur="flagchange" bindconfirm="hpl"
+      value="{{details}}" auto-height="{{true}}"/>
+    </view>
+    <view wx:else>
+      <textarea class="input" name="hlz"  placeholder="回复楼主" 
+      bindblur="" bindconfirm="hlz"
+      value="{{details}}" auto-height="{{true}}"/>
+    </view>
+    <!-- <view class="zan">
+      <view wx:if="{{contextdata.usrdata.zan_me}}">
+        <image class="zan_logo_unactived"  src="/icons/zan.png" mode="heightFix" lazy-load="false" bindtap="zanchange"  bindload="" ></image>
+      </view>
+      <view wx:else>
+        <image class="zan_logo_unactived"  src="/icons/zaned.png" mode="heightFix" lazy-load="false" bindtap="zanchange"  bindload="" ></image>
+      </view>
+    </view> -->
+    <view class="shoucang">
+      <view wx:if="{{contextdata.usrdata.shoucang_me}}">
+        <image class="" src="../../icons/shoucanged.png" mode="heightFix" bindtap="shoucangchange" lazy-load="false" binderror="" bindload="" />
+      </view>
+      <view wx:else>
+        <image class="" src="../../icons/shoucang.png" mode="heightFix" bindtap="shoucangchange" lazy-load="false" binderror="" bindload="" />
+      </view>       
+    </view>
+      
+</view>
+  
+

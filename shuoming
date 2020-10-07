@@ -1,0 +1,300 @@
+Url（1）：/index
+用途：获取用户首页数据
+传入参数：usrid//用户id
+传出参数：
+  data{ //四个对象数组下面为其中一个例子
+    Recommend[  //推荐文章数据列表其中包括很多文章对象下面为其中一个例子
+      {
+        currentcontextid: '0',//帖子id
+        data:{
+          pictures:"/pictures/test.jpg",//帖子图片（第一张）
+          title:123185,//发帖题目
+          time:45254,//发帖时间
+          people:2541,//浏览人数
+          review_num:254,//评论人数
+          zan:4//点赞数
+        },
+        contexturl:'../text_detail/text_detail'//跳转路由（目前都是一样，后面插入广告再说）
+      },
+      ]
+  }
+Url（2）：/context		
+用途：获取文章详情
+传入参数，contextid//文章id
+          usrid//浏览人id
+传出参数：下面为例子
+    contextdata:{
+      usrdata:{//发帖用户信息
+        usrpictures:"/icons/friends.jpg",//发帖人头像
+        usrname:"jack",//发帖人姓名
+        time:"10:12:00",//发帖时间
+        title:"title",//题目
+        content:"dasfasdfasdfasfdsadfsaasdfdsafsafdasfdsafd",//内容
+        zan_num:"1000",//点赞数
+        zan_me:false,//浏览者用户是否赞过
+        pictures:[//发帖中的图片数组
+          "../../pictures/test.jpg",
+          "../../pictures/test.jpg"
+        ]
+      },
+      reviewdata:[//评论数据
+          {
+            reviewid:"0",//评论id
+            name:"tom",//评论者姓名
+            sendtime:"10:12:00",//评论时间
+            usrpictures:"/icons/friends.jpg",//评论者头像
+            zan:15,//评论点赞数
+            zan_me:false,//浏览者用户是否赞过
+            content:"dasfasdfasdfasfdsadfsa\nasdfdsafsafdasfdsafd\n",//评论内容
+            answer:[//评论回复数据
+              {
+                name:"renjie",//评论者姓名
+                to :"tom",//被回复者姓名
+                nameurl:"../others/others",//评论人个人主页链接，目前都是一个加入商家号和其他号后会有变化
+                content:"????",//回复内容
+                time:"10:12:00",//回复时间
+                answerid:"0"//回复id
+              },
+              {
+                name:"marongkun",
+                to :"renjie",
+                nameurl:"",
+                content:"????",
+                time:"10:12:00",
+                answerid:"1"
+              }
+            ]
+            },
+          {
+            reviewid:"1",
+            name:"tom",
+            sendtime:"10:12:00",
+            usrpictures:"/icons/friends.jpg",
+            zan:15,
+            zan_me:false,
+            content:"dasfasdfasdfasfdsadfsa\nasdfdsafsafdasfdsafd\n",
+            answer:[
+              {
+                name:"renjie",
+                to :"tom",
+                nameurl:"",
+                content:"????",
+                time:"10:12:00",
+                answerid:"0"
+              },
+              {
+                name:"marongkun",
+                to :"renjie",
+                nameurl:"",
+                content:"????",
+                time:"10:12:00",
+                answerid:"1"
+              }
+            ]
+            },
+            {
+              reviewid:"2",
+              name:"tom",
+              sendtime:"10:12:00",
+              usrpictures:"/icons/friends.jpg",
+              zan:15,
+              zan_me:false,
+              content:"dasfasdfasdfasfdsadfsa\nasdfdsafsafdasfdsafd\n",
+              answer:[
+                {
+                  name:"renjie",
+                  to :"tom",
+                  nameurl:"",
+                  content:"????",
+                  time:"10:12:00",
+                  answerid:"0"
+                },
+                {
+                  name:"marongkun",
+                  to :"renjie",
+                  nameurl:"",
+                  content:"????",
+                  time:"10:12:00",
+                  answerid:"1"
+                }
+              ]
+              }
+      ]
+  }
+Url（3）：/contextsend		
+用途：用户发帖
+传入参数，
+          //发帖对象
+          context{
+            usrid：111//发帖人id
+            time:"10:12:00",//发帖时间
+            title:"title",//题目
+            content:"dasfasdfasdfasfdsadfsaasdfdsafsafdasfdsafd",//内容
+            pictures:[//发帖中的图片数组
+              "../../pictures/test.jpg",
+              "../../pictures/test.jpg"review
+          }
+传出参数：状态码
+          0为成功
+          1为失败
+Url（4）：/reviewsend		   
+用途：用户评论
+传入参数：
+        //评论对象
+        review{
+            usrid：111//评论人id
+            time:"10:12:00",//评论时间
+            contextid：13654 //被评论帖子id
+            content:"dasfasdfasdfasfdsadfsaasdfdsafsafdasfdsafd",//内容
+        }       
+传出参数：状态码status
+          0为成功
+          1为失败
+Url（5）：/answersend		   
+用途：用户回复
+传入参数：
+        //回复对象
+        review{
+            usrid：111//回复人id
+            time:"10:12:00",//回复时间
+            contextid：13654 //被回复帖子id
+            reviewid：46684//被回复评论id
+            content:"dasfasdfasdfasfdsadfsaasdfdsafsafdasfdsafd",//内容
+        }       
+传出参数：状态码status
+          0为成功
+          1为失败 
+Url（6）：/contextzan		
+用途：帖子点赞
+传入参数，
+          contextid：13654//文章id
+          usrid：3214//点赞者id
+传出参数：状态码status
+          0为成功
+          1为失败
+Url（7）：/contextliulan		
+用途：帖子点赞或取消
+传入参数，
+          contextid：13654//文章id
+          usrid：3214//浏览者id
+传出参数：状态码status
+          0为成功
+          1为失败
+Url（8）：/reviewzan		
+用途：评论点赞或取消
+传入参数，
+          contextid：13654//文章id
+          reviewid：46684//评论id
+          usrid：3214//点赞者id
+传出参数：状态码status
+          0为成功
+          1为失败
+Url（9）：/friends
+用途，获取用户朋友数据
+传入参数，usrid	//用户id
+传出参数， 
+      data:{
+      status:0,//状态码
+        data:[
+          {
+            Id:0,//朋友用户id
+            Name:'renjie',//朋友姓名
+            Ttitle:'R'//首字母
+          }
+        ]
+
+    },
+Url（10）：/fan
+用途，获取粉丝数据
+传入参数，usrid	//用户id
+传出参数， 
+    status:0,//状态码
+    num:154//数量
+    },
+Url（11）：/guanzhu
+用途，获取关注数据
+传入参数，usrid	//用户id
+传出参数， 
+    data:{
+    status:0,//状态码
+      data:[
+        {
+          Id:0,//朋友用户id
+          Name:'renjie',//朋友姓名
+          Ttitle:'R'//首字母
+        }，
+        {   
+          Id:0,//朋友用户id
+          Name:'marongkun',//朋友姓名
+          Ttitle:'M'//首字母
+        }，
+      ]
+
+    },
+url（12）：/login
+用途，获取用户id
+传入参数：usrtoken
+传出参数：usrid
+注：第一次登录会自动注册
+usr（13）：/history
+用途:获取用户浏览历史
+传入参数：usrid
+传出参数：
+history：[  //浏览历史数据列表其中包括很多文章对象下面为其中一个例子
+      {
+        currentcontextid: '0',//帖子id
+        data:{
+          pictures:"/pictures/test.jpg",//帖子图片（第一张）
+          title:123185,//发帖题目
+          time:45254,//发帖时间
+          people:2541,//浏览人数
+          review_num:254,//评论人数
+          zan:4//点赞数
+        },
+        contexturl:'../text_detail/text_detail'//跳转路由（目前都是一样，后面插入广告再说）
+      },
+      ]
+url（14）：/shoucanglist
+用途:获取用户收藏
+传入参数：usrid
+传出参数：
+shoucang：[  //浏览历史数据列表其中包括很多文章对象下面为其中一个例子
+      {
+        currentcontextid: '0',//帖子id
+        data:{
+          pictures:"/pictures/test.jpg",//帖子图片（第一张）
+          title:123185,//发帖题目
+          time:45254,//发帖时间
+          people:2541,//浏览人数
+          review_num:254,//评论人数
+          zan:4//点赞数
+        },
+        contexturl:'../text_detail/text_detail'//跳转路由（目前都是一样，后面插入广告再说）
+      },
+      ]  
+url（15）：/mycontext
+用途:获取用户所发帖子列表
+传入参数：usrid
+传出参数：
+context：[  //浏览历史数据列表其中包括很多文章对象下面为其中一个例子
+      {
+        currentcontextid: '0',//帖子id
+        data:{
+          pictures:"/pictures/test.jpg",//帖子图片（第一张）
+          title:123185,//发帖题目
+          time:45254,//发帖时间
+          people:2541,//浏览人数
+          review_num:254,//评论人数
+          zan:4//点赞数
+        },
+        contexturl:'../text_detail/text_detail'//跳转路由（目前都是一样，后面插入广告再说）
+      },
+      ]  
+url（16）：/shoucang
+用途：用户收藏事件（或取消）
+传入参数：usrid
+          contextid：4
+传出参数：状态码status
+url（17）：/myreview
+用途：获取用户评论数据
+（还没想好怎么做提醒什么的，之后再说）

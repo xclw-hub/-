@@ -1,0 +1,31 @@
+<view class="divLine"></view>
+<view class="author">
+  <image class="author_pictures" src="{{tabs.usrpictures}}" mode="heightFix" lazy-load="false" binderror="" bindload="" />
+  <view class="middle">
+      <view class="author_name">{{tabs.name}}</view>
+      <view class="author_time">{{tabs.sendtime}}</view>
+  </view>
+  <view class="zan">
+    <block wx:if="{{tabs.zan_me}}">
+      <image class="zan_logo" src="/icons/zaned.png" mode="aspectFit" lazy-load="false" binderror="" bindload="" data-rreviewid="{{tabs.reviewid}}" data-zan="0" bindtap="zanchange" ></image>
+    </block>
+    <block wx:else>
+       <image class="zan_logo_unactived"  src="/icons/zan.png" mode="aspectFit" lazy-load="false" data-rreviewid="{{tabs.reviewid}}" bindtap="zanchange" data-zan="1" bindload="" ></image>
+    </block>
+    <view class="zan_num">{{tabs.zan}}</view>
+  </view>
+</view>
+<view class="bottom">
+  <view class="zhanwei">
+  </view>
+  <view class="context font-break" >
+    <view class="content" bindtap="huifureview" data-rreviewid="{{tabs.reviewid}}" data-rreviewname="{{tabs.name}}">{{tabs.content}}</view>
+    <view class="answer">
+      <view wx:for="{{tabs.answer}}" wx:key="answerid" >
+        <answer answer="{{item}}" data-index="{{index}}" bindtap="huifuanswer" data-rreviewid="{{tabs.reviewid}}" data-ranswername="{{item.name}}"></answer>
+      </view>
+    </view>
+  </view>
+</view>
+  
+

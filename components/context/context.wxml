@@ -1,0 +1,25 @@
+<view class="divLine"></view>
+<view class="context">
+  <image class="context_image" src="{{tabs.pictures}}" mode="heightFix" lazy-load="true" binderror="" bindload="" />
+  <view class="context_content">
+    <view class="titie">{{tabs.title}}</view>
+    <view class="time">
+      <image class="" src="/icons/time.png" mode="widthFix" lazy-load="true" binderror="" bindload="" />
+      <view class="time_content">发表时间：{{tabs.time}}</view>
+    </view>
+    <view class="bottom">
+      <view class="readed">
+        <image class="" src="/icons/readed.png" mode="widthFix" lazy-load="true" binderror="" bindload="" />
+        <view class="readed_num">{{tabs.people}}人读过</view>
+      </view>
+      <view class="review">
+        <image class="" src="/icons/review.png" mode="widthFix" lazy-load="true" binderror="" bindload="" />
+        <view class="review_num">{{tabs.review_num}}人评论</view>
+      </view>
+      <view class="zan">
+        <image class="" src="/icons/zan.png" mode="widthFix" lazy-load="true" binderror="" bindload="" />
+        <view class="zan_num">{{tabs.zan}}人点赞</view>
+      </view> 
+    </view>
+  </view>
+</view>

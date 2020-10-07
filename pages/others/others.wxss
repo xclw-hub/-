@@ -1,0 +1,45 @@
+.people {
+  height: 150rpx;
+  display: flex;
+  font-size: 40rpx;
+}
+.people image {
+  flex: 3;
+  height: 150rpx;
+  width: 150rpx;
+  border-radius: 50%;
+}
+.people .middle {
+  flex: 7;
+  display: flex;
+  flex-direction: column;
+}
+.people .middle .people_name {
+  flex: 1;
+}
+.people .middle .people_gender {
+  flex: 1;
+}
+.people .focus {
+  flex: 5;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.people .focus image {
+  height: 50%;
+  flex: 1;
+}
+.people .focus .focus_num {
+  flex: 1;
+}
+.qianming {
+  margin-left: 135rpx;
+  font-size: 40rpx;
+  background-color: #D9D9F3;
+}
+.divLine {
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+}

@@ -1,0 +1,3 @@
+<view class="mycontext" wx:for="{{myconextdata}}" wx:key="currentcontextid">
+  <context tabs="{{item.data}}" data-index="{{index}}" bindtap="todetail" ></context>
+</view>

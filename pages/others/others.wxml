@@ -1,0 +1,31 @@
+<view class="people">
+  <image class="people_pictures" src="{{peopledata.pictures}}" mode="heightFix" lazy-load="false" binderror="" bindload="" />
+  <view class="middle">
+      <view class="people_name">{{peopledata.name}}</view>
+      <view class="people_gender">{{peopledata.gender}}</view>
+  </view>
+  <view class="focus">
+    <block wx:if="{{peopledata.focus_me}}">
+      <image class="focus_logo_actived"  src="/icons/yiguanzhu.png" mode="aspectFit" lazy-load="false" bindtap="focuschange"  bindload="" ></image>
+    </block>
+    <block wx:else>
+       <image class="focus_logo_unactived"  src="/icons/guanzhu.png" mode="aspectFit" lazy-load="false" bindtap="focuschange"  bindload="" ></image>
+    </block>
+    <view class="focus_num">{{peopledata.focus_num}}</view>
+  </view>
+</view>
+<view class="qianming">
+  {{peopledata.qianming}}
+</view>
+<view class="divLine"></view>
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange" >  
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="recommend" wx:for="{{recommenddata}}" wx:key="currentcontextid">
+      <context tabs="{{item.data}}" data-index="{{index}}" bindtap="todetail" ></context>
+    </view>
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">1</block>
+  <block wx:elif="{{tabs[2].isActive}}">2</block>
+  <block wx:elif="{{tabs[3].isActive}}">3</block>
+
+</Tabs>

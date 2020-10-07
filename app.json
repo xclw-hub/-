@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/search/search",
+    "pages/friends/friends",
+    "pages/listentome/listentome",
+    "pages/guide/guide",
+    "pages/text_list/text_list",
+    "pages/text_detail/text_detail",
+    "pages/login/login",
+    "pages/mytext/mytext",
+    "pages/others/others",
+    "pages/login2/login2",
+    "pages/logina/logina"
+  ],
+  "window": {
+    "backgroundColor": "#33FFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#33FFFF",
+    "navigationBarTitleText": "比邻",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#ff2d4a",
+    "backgroundColor": "#fafafa",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "icons/home.png",
+        "selectedIconPath": "icons/home-o.png"
+      },
+      {
+        "pagePath": "pages/listentome/listentome",
+        "text": "听我说",
+        "iconPath": "icons/write.jpg",
+        "selectedIconPath": "icons/write-o.jpg"
+      },
+      {
+        "pagePath": "pages/friends/friends",
+        "text": "朋友",
+        "iconPath": "icons/friends.jpg",
+        "selectedIconPath": "icons/friends.jpg"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "icons/my.png",
+        "selectedIconPath": "icons/my-o.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
